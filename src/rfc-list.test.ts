@@ -14,7 +14,7 @@ describe("RFC Listing test", () => {
     }
     const ongoing: OnGoing[] = [];
     for (const index of Array.from(Array(query).keys())) {
-      console.log("Fetching element %s/%s", index, query);
+      console.log("Fetching element %s/%s", index + 1, query);
 
       const refQuery = (await api.query.fellowshipReferenda.referendumInfoFor(index)).toJSON() as { ongoing?: OnGoing };
       console.log("Reference query", refQuery);
